@@ -43,9 +43,9 @@ Durante o desenvolvimento, foram utilizados o NextJS, React, NextAuth, ShadCN, T
 ## ☑️ Funcionalidades
 
 - [x] Autenticação<br />
-- [] Crud de Autores<br />
-- [] Crud de Categorias<br />
-- [] Crud de Livros<br />
+- [ ] Crud de Autores<br />
+- [ ] Crud de Categorias<br />
+- [ ] Crud de Livros<br />
 
 ---
 
