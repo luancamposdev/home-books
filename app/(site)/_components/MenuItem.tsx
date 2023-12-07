@@ -36,7 +36,7 @@ export function MenuItem({ icon, title, active, href }: MenuItemProps) {
         className="
         hidden
         transition
-        sm:group-hover:block"
+        sm:block"
       >
         {title}
       </span>

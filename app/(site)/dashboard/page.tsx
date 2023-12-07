@@ -14,10 +14,11 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col gap-5 w-full p-5  sm:h-screen sm:overflow-y-scroll md:overflow-y-auto">
-      <div className="flex flex-col md:flex-row gap-5 w-full ">
-        <div
-          className="
+    <div className="flex flex-col gap-5 w-full py-5 px-0  sm:h-screen sm:overflow-y-scroll md:overflow-y-auto bg-black">
+      <div className="flex flex-col gap-5 w-full p-5 sm:h-screen sm:overflow-y-scroll md:overflow-y-auto rounded bg-white">
+        <div className="flex flex-col md:flex-row gap-5 w-ful ">
+          <div
+            className="
             flex 
             flex-col
             items-center 
@@ -28,62 +29,63 @@ export default function Dashboard() {
             rounded-[20px]
             shadow-lg
           "
-        >
-          <h2 className="text-2xl font-bold text-center">
-            Total de categorias
-          </h2>
-          <h1 className="text-5xl font-bold">{categories.length}</h1>
-        </div>
-        <div
-          className="
-            flex 
-            flex-col
-            items-center 
-            justify-center 
-            gap-[10px]
-            w-full
-            p-5
-            rounded-[20px]
-            shadow-lg
-          "
-        >
-          <h2 className="text-2xl font-bold text-center">Total de autores</h2>
-          <h1 className="text-5xl font-bold">{authors.length}</h1>
-        </div>
-        <div
-          className="
-            flex 
-            flex-col
-            items-center 
-            justify-center 
-            gap-[10px]
-            w-full
-            p-5
-            rounded-[20px]
-            shadow-lg
-          "
-        >
-          <h2 className="text-2xl font-bold text-center">Total de livros</h2>
-          <h1 className="text-5xl font-bold">
-            {Intl.NumberFormat('en', {
-              notation: 'compact',
-            }).format(books.length)}
-          </h1>
-        </div>
-      </div>
-      <div className="flex flex-col gap-[15px] w-full">
-        <div className="flex justify-between items-center">
-          <h2 className="font-bold text-2xl">Últimos 5 livros cadastrados</h2>
-          <Button
-            size="icon"
-            className="bg-primaryColor-default hover:bg-primaryColor-default"
           >
-            <Plus />
-          </Button>
+            <h2 className="text-2xl font-bold text-center">
+              Total de categorias
+            </h2>
+            <h1 className="text-5xl font-bold">{categories.length}</h1>
+          </div>
+          <div
+            className="
+            flex 
+            flex-col
+            items-center 
+            justify-center 
+            gap-[10px]
+            w-full
+            p-5
+            rounded-[20px]
+            shadow-lg
+          "
+          >
+            <h2 className="text-2xl font-bold text-center">Total de autores</h2>
+            <h1 className="text-5xl font-bold">{authors.length}</h1>
+          </div>
+          <div
+            className="
+            flex 
+            flex-col
+            items-center 
+            justify-center 
+            gap-[10px]
+            w-full
+            p-5
+            rounded-[20px]
+            shadow-lg
+          "
+          >
+            <h2 className="text-2xl font-bold text-center">Total de livros</h2>
+            <h1 className="text-5xl font-bold">
+              {Intl.NumberFormat('en', {
+                notation: 'compact',
+              }).format(books.length)}
+            </h1>
+          </div>
         </div>
-      </div>
-      <div className="mb-20 sm:mb-6">
-        <BooksDataTable data={data} columns={columns} />
+        <div className="flex flex-col gap-[15px] w-full">
+          <div className="flex justify-between items-center">
+            <h2 className="font-bold text-2xl">Últimos 5 livros cadastrados</h2>
+            <Button
+              size="icon"
+              className="bg-primaryColor-default hover:bg-primaryColor-default"
+            >
+              <Plus />
+            </Button>
+          </div>
+        </div>
+        <div className="mb-20 sm:mb-6">
+          <BooksDataTable data={data} columns={columns} />
+        </div>
       </div>
     </div>
   )
