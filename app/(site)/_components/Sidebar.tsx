@@ -2,12 +2,12 @@ import { usePathname } from 'next/navigation'
 import { useMemo, useState } from 'react'
 
 import { Icon } from '@/components/Icon'
+import { Menu, X } from 'lucide-react'
 import { MenuItem } from './MenuItem'
 import { UserNav } from './user-nav'
-import { Menu, X } from 'lucide-react'
 
 export function Sidebar({ children }: { children: React.ReactNode }) {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const pathname = usePathname()
 
@@ -43,24 +43,24 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex">
-      {!open ? (
+      {open ? (
         <div
           className="
-          fixed sm:static
-          flex
-          items-center
-          justify-between sm:justify-normal
-          sm:flex-col
-          bottom-0
-          group 
-           bg-black 
-          w-[363px] 
-          h-[80px] sm:h-screen 
-          transition-all
-           text-white
-          sm:p-[30px]
-          z-10
-           "
+            fixed sm:static
+            flex
+            items-center
+            justify-between sm:justify-normal
+            sm:flex-col
+            bottom-0
+            group 
+            bg-black 
+            w-[363px] 
+            h-[80px] sm:h-screen 
+            transition-all
+            text-white
+            sm:p-[30px]
+            z-10
+          "
         >
           <div className="flex w-full justify-end sm-hidden">
             <button
@@ -73,13 +73,13 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
           </div>
           <div
             className="
-     flex
-     sm:flex-col
-     justify-evenly sm:justify-normal
-     items-center sm:items-start
-     w-full
-     sm:h-full
-   "
+              flex
+              sm:flex-col
+              justify-evenly sm:justify-normal
+              items-center sm:items-start
+              w-full
+              sm:h-full
+            "
           >
             {routes.map((route) => (
               <MenuItem key={route.title} {...route} />
@@ -117,14 +117,14 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
           </button>
           <div
             className="
-            flex
-            sm:flex-col
-            justify-evenly sm:justify-normal
-            items-center sm:items-start
-            w-full
-            sm:h-full
-            overflow-hidden
-          "
+              flex
+              sm:flex-col
+              justify-evenly sm:justify-normal
+              items-center sm:items-start
+              w-full
+              sm:h-full
+              overflow-hidden
+            "
           >
             {routes.map((route) => (
               <MenuItem key={route.title} {...route} />
