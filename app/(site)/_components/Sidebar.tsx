@@ -123,6 +123,7 @@ export function Sidebar({ children }: { children: React.ReactNode }) {
               items-center sm:items-start
               w-full
               sm:h-full
+              mt-4
               overflow-hidden
             "
           >

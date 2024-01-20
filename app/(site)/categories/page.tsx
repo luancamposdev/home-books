@@ -1,7 +1,20 @@
-export default function categories() {
+import { Button } from '@/components/ui/button'
+import { Plus } from 'lucide-react'
+
+export default function Categories() {
   return (
-    <div className="flex flex-col gap-5 w-full p-5">
-      <h1 className="font-bold text-2xl">Categorias</h1>
+    <div className="flex flex-col gap-5 w-full p-5 sm:h-screen sm:overflow-y-scroll md:overflow-y-auto rounded bg-white">
+      <div className="flex flex-col gap-[15px] w-full">
+        <div className="flex justify-between items-center">
+          <h2 className="font-bold text-2xl">Categorias</h2>
+          <Button
+            size="icon"
+            className="bg-primaryColor-default hover:bg-primaryColor-default"
+          >
+            <Plus />
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }
