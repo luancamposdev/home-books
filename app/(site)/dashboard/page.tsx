@@ -14,7 +14,18 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col gap-5 w-full p-5 sm:h-screen sm:overflow-y-scroll md:overflow-y-auto rounded bg-white">
+    <div
+      className="
+        flex
+        flex-col
+        gap-5 
+        w-full 
+        p-5 
+        sm:h-screen sm:overflow-y-scroll 
+        md:overflow-y-auto 
+        rounded 
+        bg-white"
+    >
       <div className="flex flex-col md:flex-row gap-5 w-ful ">
         <div
           className="
